@@ -3,32 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Blog preview card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    :root{
+      --yellow: hsl(47, 88%, 63%);
+      --white: hsl(0, 0%, 100%);
+      --gray500: hsl(0, 0%, 42%);
+      --gray950: hsl(0, 0%, 7%);
+    }
+    body{
+      background-color: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 130px;
+    }
+    .card{
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      color: var(--white);
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      background-color: var(--white);
+      padding: 25px;
+      row-gap: 15px;
+      border-right: 7px solid var(--gray950);
+      border-bottom: 7px solid var(--gray950);
+      border-top: 1px solid var(--gray950);
+      border-left: 1px solid var(--gray950);
+    }
+    .illustration{
+      border-radius: 10px;
+    }
+    .learningbox{
+      width: 80px;
+      height: 30px;
+      background-color: var(--yellow);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+    }
+    .learning{
+      margin: 0 auto;
+      color: var(--gray950);
+      font-family: "Figtree ExtraBold";
+      font-weight: 800;
+      font-size: 13px;
+    }
+    p, h1{
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+    .date{
+      color: var(--gray950);
+      font-family: "Figtree Light";
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .title{
+      font-family: "Figtree ExtraBold";
+      font-size: 16px;
+      color: var(--gray950);
+      font-weight: 800;
+    }
+    .title:hover{
+      color: var(--yellow);
+      cursor: pointer;
+    }
+    .text{
+      font-family: "Figtree Light";
+      font-size: 14px;
+      color: var(--gray500);
+      font-weight: 500;
+    }
+    .author{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .authorimg{
+      width: 30px;
+      height: 30px;
+    }
+    .authorname{
+      font-family: "Figtree ExtraBold";
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--gray950);
+    }
   </style>
 </head>
 <body>
-
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="card">
+    <img class="illustration" src="/assets/images/illustration-article.svg" alt="illustration-article">
+    <div class="learningbox">
+      <p class="learning">Learning</p>
+    </div>
+    <p class="date">Published 21 Dec 2023</p>
+    <h1 class="title">HTML & CSS foundations</h1>
+    <p class="text">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+    <div class="author">
+      <img class="authorimg" src="/assets/images/image-avatar.webp" alt="author">
+      <p class="authorname">Greg Hooper</p>
+    </div>
   </div>
 </body>
 </html>
